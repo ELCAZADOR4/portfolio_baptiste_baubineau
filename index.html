@@ -2,90 +2,38 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Baptiste Baubineau - CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baptiste Baubineau - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <strong>Baptiste Baubineau</strong>
+            <span class="logo"><strong>Baptiste Baubineau</strong></span>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Mon CV</a></li>
-                <li><a href="lettre.html">Lettre de motivation</a></li>
+                <li><a href="index.html" class="active"><strong>Accueil</strong></a></li>
+                <li><a href="projets.html"><strong>Projets</strong></a></li>
+                <li><a href="cv.html"><strong>CV</strong></a></li>
+                <li><a href="lettre.html"><strong>Lettre</strong></a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="cv-container">
-        <aside class="sidebar">
-            <h1 style="font-size: 1.5rem; margin-bottom: 40px;">BAPTISTE BAUBINEAU</h1>
-            
-            <h2>Contact</h2>
-            <ul>
-                <li>📍 Nantes, France</li>
-                <li>📞 07 77 84 71 89</li>
-                <li>✉️ baubineau.baptiste@gmail.com</li>
-            </ul>
-
-            <h2>Langages</h2>
-            <ul>
-                <li>Golang ★★★★</li>
-                <li>Python ★★★★</li>
-                <li>HTML / CSS ★★★</li>
-                <li>C++ / C ★★★</li>
-            </ul>
-
-            <h2>Loisirs</h2>
-            <ul>
-                <li>Handball (Arbitre National)</li>
-                <li>Échecs</li>
-                <li>Guitare </li>
-                <li>Piano</li>
-            </ul>
-        </aside>
-
-        <main class="main-content">
-            <section>
-                <h2 style="color: var(--primary); border-bottom: 2px solid #f1f5f9; padding-bottom: 10px;">EXPÉRIENCES</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="timeline-date">2025</span>
-                        <span class="timeline-title">Développement Moteur de Rendu</span>
-                        <p>Conception d'un moteur de rendu de particules en Go pour une optimisation fluide en temps réel.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">2025</span>
-                        <span class="timeline-title">Bénévole Agile Tour</span>
-                        <p>Immersion dans les méthodes agiles et soutien logistique à l'événement.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">2024</span>
-                        <span class="timeline-title">Projet Système de Mesure</span>
-                        <p>Programmation d'un dispositif de mesure de vent basé sur une architecture C++.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">2024</span>
-                        <span class="timeline-title">Site Web Généalogique</span>
-                        <p>Mise en page d'un site web dédié à la visualisation d'un arbre généalogique en HTML/CSS.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section style="margin-top: 40px;">
-                <h2 style="color: var(--primary); border-bottom: 2px solid #f1f5f9; padding-bottom: 10px;">FORMATION</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="timeline-date">En cours</span>
-                        <span class="timeline-title">BUT Informatique - Nantes</span>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">2022</span>
-                        <span class="timeline-title">Bac STI2D - Mention Très Bien</span>
-                        <p>Lycée Eugène Livet, Nantes.</p>
-                    </div>
-                </div>
-            </section>
-        </main>
+    <div class="full-width-wrapper">
+        <section class="hero-section">
+            <div class="hero-text">
+                <h1>Bonjour,<br>Je suis Baptiste.</h1>
+                <p>J'ai 18 ans <br>Je suis étudiant en BUT Informatique à Nantes<br> passionné par le développement.</p>
+                <p>
+                    En dehors du code, je suis arbitre national de Handball et musicien, des activités qui m'apportent rigueur et créativité au quotidien.
+                </p>
+                <a href="projets.html" class="btn">Voir mes projets</a>
+            </div>
+            <div class="hero-image">
+                <img src="pp.jpg" alt="Baptiste Baubineau" class="hero-img-circle">
+            </div>
+        </section>
     </div>
 </body>
 </html>
