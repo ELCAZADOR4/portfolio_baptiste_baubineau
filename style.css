@@ -194,6 +194,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s;
+    max-width: 400px; 
 }
 .project-card:hover { transform: translateY(-5px); }
 .project-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
