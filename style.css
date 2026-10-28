@@ -228,35 +228,32 @@ body {
     .nav-links { gap: 1rem; }
 }
 
-/* Style pour intégrer le bouton de téléchargement du CV */
-.download-container {
-    max-width: 1100px;
-    margin: 30px auto 0 auto; /* Aligné avec le wrapper principal */
+.pdf-wrapper {
+    width: min(1100px, 100%);
+    margin: 30px auto;
     padding: 0 20px;
-    display: flex;
-    justify-content: flex-end; /* Aligne le bouton à droite. Changez par 'center' si vous préférez au milieu */
+    flex: 1;
 }
 
-.download-container .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px; /* Espace entre l'émoji/icône et le texte */
+.cv-pdf {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 150px);
+    min-height: 600px;
+    border: 0;
+    border-radius: var(--radius);
+    background: white;
     box-shadow: var(--shadow);
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.download-container .btn:hover {
-    transform: translateY(-2px); /* Léger effet de survol comme vos cartes */
 }
 
 /* Ajustement pour les petits écrans */
 @media (max-width: 850px) {
-    .download-container {
-        justify-content: center; /* Centre le bouton sur mobile */
-        margin-top: 20px;
+    .pdf-wrapper {
+        margin: 20px auto;
+        padding: 0 12px;
     }
-    .download-container .btn {
-        width: 100%; /* Le bouton prend toute la largeur sur mobile pour être plus cliquable */
-        justify-content: center;
+    .cv-pdf {
+        height: calc(100vh - 110px);
+        min-height: 500px;
     }
 }
