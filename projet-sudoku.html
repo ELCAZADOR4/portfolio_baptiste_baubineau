@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Un solveur Python pour des grilles de différentes tailles, développé étape par étape à l’aide de tests.">
+    <meta name="description" content="Projet de solveur SAT en Python et de modélisation du Sudoku en forme normale conjonctive.">
     <title>Résolveur de Sudoku · Baptiste Baubineau</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,16 +28,45 @@
         <a class="back-link" href="projets.html">Tous les projets</a>
         <article>
             <header class="detail-head">
-                <p class="meta">Python · SAT/CNF · 2025</p>
-                <h1>Résolveur de Sudoku</h1>
+                <p class="meta">Python · SAT/CNF · DPLL · Projet individuel</p>
+                <h1>Sudoku &amp; solveur SAT</h1>
             </header>
             <div class="detail-art"><div class="art art--sudoku" aria-hidden="true"><div class="sudoku-board"><span>5</span><span>3</span><span>·</span><span>·</span><span>7</span><span>·</span><span>·</span><span>·</span><span>·</span><span>6</span><span>·</span><span>·</span><span>1</span><span>9</span><span>5</span><span>·</span><span>·</span><span>·</span><span>·</span><span>9</span><span>8</span><span>·</span><span>·</span><span>·</span><span>·</span><span>6</span><span>·</span><span>8</span><span>·</span><span>·</span><span>·</span><span>6</span><span>·</span><span>·</span><span>·</span><span>3</span><span>4</span><span>·</span><span>·</span><span>8</span><span>·</span><span>3</span><span>·</span><span>·</span><span>1</span><span>7</span><span>·</span><span>·</span><span>·</span><span>2</span><span>·</span><span>·</span><span>·</span><span>6</span><span>·</span><span>6</span><span>·</span><span>·</span><span>·</span><span>·</span><span>2</span><span>8</span><span>·</span><span>·</span><span>·</span><span>·</span><span>4</span><span>1</span><span>9</span><span>·</span><span>·</span><span>5</span><span>·</span><span>·</span><span>·</span><span>·</span><span>8</span><span>·</span><span>·</span><span>7</span><span>9</span></div></div></div>
             <div class="detail-body" data-reveal>
-                <h2>Le projet</h2>
+                <h2>Contexte &amp; objectif</h2>
                 <div>
-                    <p>Développement individuel d’un programme capable de résoudre des grilles de Sudoku de différentes tailles à partir des chiffres déjà renseignés.</p>
-                <p>Les fonctionnalités ont été implémentées progressivement, fonction par fonction, et vérifiées à l’aide de tests.</p>
-                    
+                    <p>Projet individuel de BUT Informatique à l’IUT de Nantes, réalisé dans le cadre de la SAE S1-02 « Étudier la satisfiabilité d’un ensemble de contraintes ».</p>
+                    <p>L’objectif est de développer un solveur SAT en Python, puis de modéliser les règles du Sudoku sous forme de contraintes booléennes afin de rechercher une grille solution.</p>
+                    <p><a class="button button--primary" href="https://github.com/ELCAZADOR4/portfolio_baptiste_baubineau/blob/main/code/sudoku_sat.py" target="_blank" rel="noopener noreferrer">Voir mon code sur GitHub ↗</a> <a class="button" href="code/sudoku_sat.py" download>Télécharger le fichier Python ↓</a></p>
+                </div>
+            </div>
+            <div class="detail-body" data-reveal>
+                <h2>Approche algorithmique</h2>
+                <div>
+                    <p>Une formule en forme normale conjonctive (CNF) est représentée par une liste de clauses, elles-mêmes composées de littéraux entiers signés. Les variables peuvent prendre les valeurs True, False ou None.</p>
+                    <ol style="padding-left:1.3rem;color:var(--muted);">
+                        <li><strong>Évaluation logique :</strong> évaluation des clauses et des formules selon une valuation partielle.</li>
+                        <li><strong>Force brute :</strong> génération des valuations possibles et recherche d’une valuation satisfaisante.</li>
+                        <li><strong>Parcours d’arbre :</strong> exploration des affectations, retour arrière et simplification des formules.</li>
+                        <li><strong>DPLL :</strong> travail sur la propagation des clauses unitaires, les littéraux purs et les affectations imposées.</li>
+                    </ol>
+                    <pre style="margin-top:1.2rem;padding:1.2rem;border-radius:.65rem;overflow:auto;background:#19283e;color:#e0eeff;"><code>formule = [[1, 2], [-1, 3], [-2, -3]]</code></pre>
+                    <p style="margin-top:.65rem;font-size:.9rem;">Exemple illustratif d’une formule CNF représentée en Python.</p>
+                </div>
+            </div>
+            <div class="detail-body" data-reveal>
+                <h2>Du Sudoku au SAT</h2>
+                <div>
+                    <p>Le sujet prévoit d’associer une variable booléenne à chaque combinaison ligne, colonne et valeur. Les contraintes imposent l’unicité des nombres dans les lignes, les colonnes, les régions et les cases.</p>
+                    <p>Pour une grille classique de 9 × 9, cette modélisation représente 729 variables booléennes avant simplification.</p>
+                    <p>La version du code source présentée ici contient les fonctions du solveur et les tests associés. Les fonctions de construction et de conversion de la grille Sudoku restent à compléter dans cette version ; il ne s’agit donc pas d’un résolveur Sudoku entièrement fonctionnel.</p>
+                </div>
+            </div>
+            <div class="detail-body" data-reveal>
+                <h2>Compétences mobilisées</h2>
+                <div>
+                    <p>Python, logique propositionnelle, structures de données, récursivité, backtracking, simplification de contraintes et tests fonctionnels.</p>
+                    <a class="text-link" href="https://github.com/ELCAZADOR4/portfolio_baptiste_baubineau/blob/main/code/sudoku_sat.py" target="_blank" rel="noopener noreferrer">Consulter l’implémentation Python ↗</a>
                 </div>
             </div>
         </article>
