@@ -1,28 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Baptiste Baubineau</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Télécharger le CV de Baptiste Baubineau au format PDF.">
+    <title>Télécharger le CV · Baptiste Baubineau</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css?v=20261124">
+    <script src="animations.js?v=20261124" defer></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <span class="logo"><strong>Baptiste Baubineau</strong></span>
-            <ul class="nav-links">
-                <li><a href="index.html"><strong>Accueil</strong></a></li>
-                <li><a href="projets.html"><strong>Projets</strong></a></li>
-                <li><a href="cv.html" class="active"><strong>CV</strong></a></li>
-            </ul>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+        <div class="shell topbar">
+            <a class="wordmark" href="index.html" aria-label="Baptiste Baubineau, accueil"><span aria-hidden="true"></span> Baptiste B.</a>
+            <nav aria-label="Navigation principale">
+                <a href="index.html#projets">Projets</a>
+                <a href="index.html#profil">Profil</a>
+                <a href="index.html#disponibilites">Disponibilités</a>
+            </nav>
+            
         </div>
-    </nav>
-
-    <main class="pdf-wrapper">
-        <a class="cv-preview-link" href="CV.pdf" target="_blank" rel="noopener" aria-label="Ouvrir le CV original au format PDF">
-            <img class="cv-preview" src="CV-preview.png" alt="Aperçu du CV de Baptiste Baubineau. Cliquer pour ouvrir le PDF original.">
-        </a>
+    </header>
+    <main id="contenu" class="shell cv-page" aria-label="CV de Baptiste Baubineau">
+        <a class="button button--cv" href="CV.pdf" download="CV-Baptiste-Baubineau.pdf">Télécharger le CV</a>
     </main>
 </body>
 </html>
